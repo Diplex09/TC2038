@@ -59,6 +59,8 @@ void mergeSortStart(double a[], int size)
 {
     mergeSort(a, 0, size - 1);
 
+    std::cout << "\nSorted list from highest to lowest of the " << size << " given numbers:\n";
+
     for (int i=0; i<size; i++)
     {
         if(i == size - 1)
@@ -87,6 +89,8 @@ int main(void)
     if(!(totalNums - int(totalNums) > 0) && totalNums > 0)
     {
         double numsToSort[int(totalNums)];
+
+        std::cout << "\nPlease enter the " << totalNums << " numbers to sort:\n";
 
         for (int i=0; i < totalNums; i++)
         {
