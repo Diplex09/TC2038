@@ -1,6 +1,6 @@
 
 README
-This activity does a merge sort where you input how many numbers you want to order, then the numbers to order and it will order them in an ascendent form. The program runs with the command prompt
+This activity does a merge sort where you input how many numbers you want to order, then the numbers to order and it will order them in an ascendent form. The program runs with the command prompt.
 
 Caso de uso 1 
 Input (Number of numbers to sort): 4
