@@ -33,12 +33,10 @@ int minCoins(int coins[], int total_coins, int N) // Function to return the mini
             // see if result can minimize
             if (sub_res < result)
                 result = sub_res;
-                cout<<coins[i]<<endl;
         }
     }
     return result;
-}
-  
+}  
 
 
 int coinCounter(int coins[], int size, int cost, int payment){
@@ -105,7 +103,7 @@ int main() {
     }
     cout<<"\n";*/
     
-    int coins[] = { 30,10, 20, 25, 5 };
+    int coins[] = { 10 ,25, 5 };
     int sum = 30; // the money to convert
     int total_coins = 3; // total availability of coins
     cout << "Minmum coins needed are " << minCoins(coins, total_coins, sum);
