@@ -11,6 +11,7 @@ using namespace std;
 int totalCoins[0];
 int change=0;
 
+// La funcion merge realiza el ordenamiento del arreglo que se le ingresa
 void merge(int a[], int start, int end)
 {
     int middle = (start + end) / 2;
@@ -48,6 +49,7 @@ void merge(int a[], int start, int end)
     }
 }
 
+//La funcion mergeSort hace la division e inicia la recursion para el ordenamiento del arreglo
 void mergeSort(int a[], int start, int end)
 {
     if(start < end)
@@ -59,6 +61,9 @@ void mergeSort(int a[], int start, int end)
     }
 }
 
+
+
+//La funcion mergeSortStart manda a llamar el resto de funciones "Merge" para el ordenamiento del arreglo
 void mergeSortStart(int a[], int size)
 {
     mergeSort(a, 0, size - 1);
@@ -81,7 +86,7 @@ void mergeSortStart(int a[], int size)
 
 
 
-
+// La funcion changeConverter es utilizada para una bandera, ademas que registra el cambio que vamos a recibir
 bool changeConverter(int cost, int payment) {
      change=payment-cost;;
     
@@ -99,6 +104,9 @@ bool changeConverter(int cost, int payment) {
     return true;
 };
 
+
+//La funcion minCoinDynamic a traves de la programacion dinamica y los apuntadores de arreglos realizan las
+//posibles combinaciones que pueden dar el cambio, siempre buscando dar la menor cantidad de monedas posibles y te regresa el numero de monedas que va a regresar
 int minCoinDynamic(int amount, int coins[], int size, int C[], int s[])
 {
     C[0] = 0;
@@ -120,20 +128,7 @@ int minCoinDynamic(int amount, int coins[], int size, int C[], int s[])
 
 
 
-
-
-/*
- Function that counts the coins and returns the numbers of coins needed but greedy.
- INPUT
- coins[]= The coins available to choose.
- size = The size of the numbers it can take.
- value = The price of the product.
- Output = Total of numbers.
-*/
-
-
-
-
+// La funcion minCoinGreedy busca cuantas monedas va a devolver, es importante mencionar que en este caso funciona mejor si le das el numero de monedas ordenado de mayor a menor (por eso es greedy).
 int minCoinGreedy(int coins[], int size, int cost){
     int count = 0;
     
@@ -155,24 +150,8 @@ int minCoinGreedy(int coins[], int size, int cost){
     
 }
 
-
+//Se instancian varias variables a utilizar y despliegan los resultados
 int main() {
-/*   int coins[]={25,20,10,5};
-    int cost = 100;
-    int payment = 140;
-
-    int size = sizeof(coins)/sizeof(coins[0]);
-    int MinCount = coinCounter(coins,size,cost);
-    cout<<"Coins : " <<MinCount<<"\n";
-    printf("The coins to give are: ");
-    for(int i = 0; i < MinCount; i++){
-        cout<<endl<<totalCoins[i]<<"$";
-//            printf("%d ", totalCoins[i],"/n");
- 
-    }
-
-    
-    */
     
     int cost,num,payment;
     int numberArray;
