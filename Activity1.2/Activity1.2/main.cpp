@@ -82,7 +82,7 @@ bool changeConverter(int cost, int payment) {
     if(payment < cost)
     {
         change = change * - 1;
-        cout << "There is not enough money, please add : " << (change) << "$" << endl;
+        cout << "\nThere is not enough money, please add : " << (change) << "$" << endl;
         return false;
     }
     else if(payment == cost)
@@ -107,7 +107,6 @@ int minCoinDynamic(int amount, int coins[], int size, int C[], int s[])
             if(j >= coins[i] && 1 + C[j-coins[i]] < C[j]) 
             {
                 C[j] = 1 + C[j-coins[i]];
-                cout << C[j] << endl;
                 // i-th denomination used for the amount of j
                 s[j] = i;
             }
@@ -194,7 +193,6 @@ int main()
                     {
                         //      Dynamic algoritm
                         int totalChangeDyn = minCoinDynamic(amount, coins, size, C, s);
-                        cout << totalChangeDyn << endl;
                         if (totalChangeDyn > 0 && totalChangeDyn < INT_MAX)
                         {
                             cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~ DYNAMIC PROGRAMMING ALGORITHM ~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
