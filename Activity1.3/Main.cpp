@@ -3,13 +3,15 @@
 //  Maze
 //
 //  Created by Diego Velázquez on 02/09/21.
-//
+// backtraccking
 #include <stdio.h>
 #include <iostream>
 #include <vector>
 using namespace std;
 
-
+bool solveMaze(vector<vector<int>>maze,int x,int y,vector<vector<int>>visited){
+    return true;
+}
 
 
 bool mazeSolver(vector<vector<int>>maze){
@@ -17,7 +19,7 @@ bool mazeSolver(vector<vector<int>>maze){
     long sizeColumns=maze[0].size();
     vector<vector<int>> visited(sizeRows,vector<int>(sizeColumns,0));
     
-    
+    solveMaze(maze,0,0,visited);
     
     
     
@@ -50,5 +52,8 @@ int main()
 
 
     
+    
+
+
     
 
