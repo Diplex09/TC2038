@@ -32,11 +32,25 @@ Caso de prueba 3, Crea y muestra el maze de un 4X4 pero con solución.
 	0 1 1 1 
 	0 0 0 1 
 
-Caso de prueba 4 ,Crea y muestra el maze de un 4X5 pero con solución siendo diferentes los tamaños.
+Caso de prueba 4 ,Crea y muestra el maze de un 4X5 con solución  pero siendo diferentes los tamaños.
 	Input Type row and columns: 4 5
 	1 0 0 0 0 
 	1 0 0 0 0 
 	1 1 1 1 0 
 	0 0 0 1 1 
+	Output:
 	No hay solución
+
+Caso de prueba 5 ,Crea y muestra el maze de un 3X3 pero con solución s.
+
+	Type row and columns: 3 3
+
+	1 0 1
+	1 0 1
+	1 1 1
+	Backtracking
+	Output:
+	1 0 0 
+	1 0 0 
+	1 1 1 
  
