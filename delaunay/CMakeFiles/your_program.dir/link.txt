@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++ -O3 -DNDEBUG -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/your_program.dir/delaunay.cpp.o -o your_program  /usr/local/lib/libgmpxx.dylib /usr/local/lib/libmpfr.dylib /usr/local/lib/libgmp.dylib 
