@@ -1,0 +1,3 @@
+/Users/diegovelazquez/Documents/GitHub/TC2038/Actividad imposible/CMakeFiles/rebuild_cache.dir
+/Users/diegovelazquez/Documents/GitHub/TC2038/Actividad imposible/CMakeFiles/edit_cache.dir
+/Users/diegovelazquez/Documents/GitHub/TC2038/Actividad imposible/CMakeFiles/delaunay.dir

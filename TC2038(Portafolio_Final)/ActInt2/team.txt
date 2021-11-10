@@ -1,0 +1,14 @@
+Equipo conformado por:
+- Diego Velazquez Moreno | A01632240         
+- Aldo Alejandro Degollado Padilla | A01638391
+
+
+Trabajado por Diego:
+Función: void patternFinder basada en algoritmo KMP ademas de su función de ayuda prefixsufixCalc.
+Función commonSubstringCal que busca el substring más largo entre los dos archivos de transmission.
+ 
+
+Trabajado por Aldo:
+Función: findLongestPalindromicString que busca palíndromos dentro de un string con el algoritmo de Manachers.
+Lectura de los archivos txt, estilización de código y el main del programa.
+
