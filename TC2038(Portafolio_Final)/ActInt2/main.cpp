@@ -9,6 +9,7 @@
 #include <cstring>
 #include <fstream>
 #include <vector>
+#include <queue>
 #include <limits> 
 using namespace std;
 
@@ -69,6 +70,59 @@ void dijkstra(vector<vector<int> > &adjList, int source){
   }
  
 }
+
+
+//Algoritmo Fordfoulkson
+
+bool bfs(vector<vector<int>> &auxGraph,int s, int t, int parent[]){
+  int graphSize = auxGraph.size();
+  bool visited[graphSize];
+  memset(visited, 0 , sizeof(visited));
+
+  queue<int> q;
+  q.push(s);
+  visited[s] = true;
+  parent[s] = -1;
+  while(!q.empty()){
+    int u = q.front();
+    q.pop();
+    for (int v = 0; v<graphSize;v++){
+      if (visited[v] == false && auxGraph[u][v]>0){
+        if (v == t){
+          parent[v] = u;
+          visited[v] = true;
+        }
+      }
+    }
+  }
+  return false;
+
+}
+int fourdFulkerson(vector<vector<int>> &graph, int s, int t){
+  int graphSize = graph.size();
+  int u = 0;
+  int v = 0;
+  int parent[graphSize];
+  int max_flow = 0;
+  vector<vector<int>> auxGraph(graphSize, vector<int>(graphSize,0)) ;
+  while (bfs(auxGraph,s,t,parent)){
+    int path_flow = INF;
+    for (v = t; v != s; v = parent[v]) {
+      u = parent[v];
+      path_flow = min(path_flow, auxGraph[u][v]);
+    }
+    for (v = t; v != s; v = parent[v]) {
+      u = parent[v];
+      auxGraph[u][v] -= path_flow;
+      auxGraph[v][u] += path_flow;
+    }
+    return max_flow;
+
+  }
+
+
+}
+
 
 int main() {
   cout << "\n |-|-|      Dijstra & Floyd      |-|-|" << endl;
