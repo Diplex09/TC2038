@@ -4,11 +4,12 @@ Equipo conformado por:
 
 
 Trabajado por Diego:
-Función: void patternFinder basada en algoritmo KMP ademas de su función de ayuda prefixsufixCalc.
-Función commonSubstringCal que busca el substring más largo entre los dos archivos de transmission.
- 
+Función: Dijkstra 
+Función: fordFulkserson
+Lectura de los archivos txt, estilización de código y el main del programa.
 
 Trabajado por Aldo:
-Función: findLongestPalindromicString que busca palíndromos dentro de un string con el algoritmo de Manachers.
-Lectura de los archivos txt, estilización de código y el main del programa.
+Función: TSP Dinamica
+Función: Voronoi
+
 
